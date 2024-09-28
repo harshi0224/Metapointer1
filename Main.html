@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Society Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styles */
+        .welcome-section {
+            background-color: #0f0e0e;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .about-section img {
+            width: 70%;
+            height: auto;
+        }
+
+        .blogs-section .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #080808;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        #maintop {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.841);
+            height: 40px;
+            font-family: sans-serif;
+        }
+
+        #maintop h6 {
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        #small {
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Welcome Section -->
+    <div id="maintop">
+        <h6>Proptoll</h6>
+    </div>
+    <section class="welcome-section">
+        <h1>Welcome to our society</h1>
+        <p id="small">Enhancing Community Living with Simplified Payments, Comprehensive Document Management, Efficient Invoice and Bill Management, Advanced data insights, Robust insurance and asset management, Streamlined payroll, Interactive forums and chat, and a secure digital ledger.</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section container my-5" id="content-area">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Us</h2>
+                <p>Vasant Nagar is a highly desirable location known for its upscale residential environment and strategic location. The area boasts well-planned infrastructure, including wide roads, well-maintained parks, and a range of amenities that cater.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+            <div class="col-md-6">
+                <img src="https://idpl.proptoll.com/display/vasanthnagar/img/icons/bg.jpg" alt="About Us Image" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section class="blogs-section container my-5">
+        <h2 class="text-center">Blogs</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://idpl.proptoll.com/display/vasanthnagar/img/icons/bg.jpg" class="card-img-top" alt="Blog Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Water</h5>
+                        <p class="card-text">Vasant Nagar is a highly desirable location known for its upscale residential environment and strategic location...</p>
+                        <button class="btn btn-primary" onclick="showContent('content1')">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2014/12/24/05/02/drop-of-water-578897_1280.jpg" class="card-img-top" alt="Blog Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Waterdrop</h5>
+                        <p class="card-text">Waterdrop designs and sells water purification products, including water filter pitchers...</p>
+                        <button class="btn btn-primary" onclick="showContent('content2')">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.wallpaperflare.com/static/353/475/629/space-purple-planet-galaxy-wallpaper.jpg" class="card-img-top" alt="Blog Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Saturn</h5>
+                        <p class="card-text">Saturn's clouds can appear in a variety of colors when captured with the spectral filters...</p>
+                        <button class="btn btn-primary" onclick="showContent('content3')">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section container my-5">
+        <h4>Contact</h4>
+        <p>Near Shopping Complex, Hyderabad 500085</p>
+        <p>Phone: 100</p>
+        <p>Email: info@example.com</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright © PropTail</p>
+    </footer> 
+
+    <!-- Bootstrap JS and dependencies -->
+    <script>
+        function showContent(contentType) {
+            const contentArea = document.getElementById("content-area");
+
+            if (contentType === "content1") {
+                contentArea.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>About Water</h2>
+                            <p>Vasant Nagar is a highly desirable location known for its upscale residential environment...</p>
+                            <a href="blog1.html" class="btn btn-primary">clickme</a>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="https://idpl.proptoll.com/display/vasanthnagar/img/icons/bg.jpg" alt="About Us Image" class="img-fluid">
+                        </div>
+                    </div>
+                `;
+            } else if (contentType === "content2") {
+                contentArea.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>About Waterdrop</h2>
+                            <p>Waterdrop designs and sells water purification products, including water filter pitchers...</p>
+                            <a href="blog2.html" class="btn btn-primary">clickme</a>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="https://cdn.pixabay.com/photo/2014/12/24/05/02/drop-of-water-578897_1280.jpg" alt="Waterdrop Image" class="img-fluid">
+                        </div>
+                    </div>
+                `;
+            } else if (contentType === "content3") {
+                contentArea.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>About Saturn</h2>
+                            <p>Saturn's clouds can appear in a variety of colors, including green, blue, and purple...</p>
+                            <a href="blog3.html" class="btn btn-primary">Read More</a>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="https://www.wallpaperflare.com/static/353/475/629/space-purple-planet-galaxy-wallpaper.jpg" alt="Saturn Image" class="img-fluid">
+                        </div>
+                    </div>
+                `;
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
